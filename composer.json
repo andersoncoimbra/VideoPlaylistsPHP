@@ -1,0 +1,22 @@
+{
+    "name": "andersoncoimbra/streamer-php",
+    "description": "sistema de entrega de video",
+    "autoload": {
+        "psr-4": {
+            "StreamerPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Anderson Coimbra"
+        }
+    ],
+    "require": {
+        "nikic/fast-route": "^1.3"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"if (!is_link('public/play')) { symlink('../videos', 'public/play'); }\""
+        ]
+    }
+}
